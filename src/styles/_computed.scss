@@ -1,0 +1,44 @@
+:root {
+    --vl-green :#FDFDFC;
+    --l-green:#EAEEDD;
+    --green:#606C38;
+    --d-green:#2D321A;
+
+    --primary-ft: 'Averia Serif Libre', cursive;
+    --secondary-ft: 'Source Sans Pro', sans-serif;
+}
+
+
+// function for font-weights
+$font-weight: (
+    "regular": 400,
+    "semi-bold": 600,
+    "bold": 700
+);
+
+@function weight($name) {
+    @return map-get($font-weight, $name)
+};
+
+
+// mixin for flexbox
+@mixin flex($fd, $jc) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: center;
+}
+
+
+// mixin breakpoint for responsive layout
+$breakpoints: (
+    "mobile": 375px,
+    "tablet": 900px,
+    "desktop": 1024px
+);
+
+@mixin breakpoint($size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+       @content; 
+    }
+}
