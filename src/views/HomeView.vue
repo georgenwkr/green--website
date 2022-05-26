@@ -191,7 +191,7 @@ export default {
         font-family: var(--secondary-ft);
         font-weight: weight(regular);
         color: var(--green);
-        font-size: 28px;
+        font-size: 20px;
         margin-top: 30px;
         max-width: 600px;
 
